@@ -308,6 +308,7 @@ void registrarTurista(HashMap* mapaTuristas, HashMap* mapaTuristasPorPais) {
     // INSERTAR AL TURISTA EN EL MAPA
     insertMap(mapaTuristas, nuevoTurista->pasaporte, nuevoTurista);
 
+    //COMENTADO DEBIDO A QUE EL PROGRAMA CRASHEA
    /* Pair* paisTurPair = searchMap(mapaTuristasPorPais, pais);
     MapaTuristasPais* paisTur;
 
@@ -466,7 +467,7 @@ void importarCSV(HashMap* mapaPuntosTuristicos, HashMap* mapaPuntosPorTipo, Hash
         PuntoTuristico* punto = crearPuntoTuristico(nombre, tipo, direccion, horario, descripcion);
         insertMap(mapaPuntosTuristicos, punto->nombre, punto);
 
-        // ESTO ESTA COMENTADO DEBIDO A QUE SE CRASHEA EL PROGRAMA
+        //COMENTADO DEBIDO A QUE EL PROGRAMA CRASHEA 
         /*MapaTipoDePuntos* tipoPuntos = (MapaTipoDePuntos*)searchMap(mapaPuntosPorTipo, tipo);
         if (tipoPuntos == NULL) {
             tipoPuntos = (MapaTipoDePuntos*)malloc(sizeof(MapaTipoDePuntos));
